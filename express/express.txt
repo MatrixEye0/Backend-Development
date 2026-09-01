@@ -1,0 +1,27 @@
+Express gives you a cleaner way to build APIs and web servers.
+
+without Express
+Node http
+   ↓
+Manually handle:
+   ├── URL
+   ├── HTTP method
+   ├── request body
+   ├── headers
+   ├── query parameters
+   ├── parameters
+   ├── JSON response
+   ├── routing
+   └── middleware
+
+
+with express
+Express
+   ↓
+Easy routing
+   ↓
+Middleware
+   ↓
+Request/Response helpers
+   ↓
+REST APIs

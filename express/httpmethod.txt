@@ -1,0 +1,10 @@
+Client
+  │
+  ├── GET     → Give me data
+  ├── POST    → Create new data
+  ├── PUT     → Replace/update complete data
+  ├── PATCH   → Update part of data
+  └── DELETE  → Delete data
+  │
+  ▼
+Server
