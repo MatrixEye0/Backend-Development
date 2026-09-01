@@ -34,4 +34,8 @@ Versioning ---------------------------------------------------------------------
 
  carot function ^ mean lock 5 and update part 1 & 2 version if you need and they update automaticaly
 
-Restfull API-----------------------==================-------------------------======================----------------
+Rest(Representational State Transfer) API(Application Programming Interface)-----------------------==================-------------------------======================----------------
+|
+v
+REST API (Representational State Transfer API) is an API design style that allows a client and server to communicate
+ over HTTP using resources, URLs, and standard HTTP methods such as GET, POST, PUT, PATCH, and DELETE.
