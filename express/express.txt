@@ -25,3 +25,13 @@ Middleware
 Request/Response helpers
    ↓
 REST APIs
+
+Versioning ----------------------------------------------------------------------------------------------------------
+^5.1.1 
+ part 1 is 1 = fix small bug 
+ part 2 is 1 = fix big thing 
+ part 3 is 5 = fix major thing & breaking thing 
+
+ carot function ^ mean lock 5 and update part 1 & 2 version if you need and they update automaticaly
+
+Restfull API-----------------------==================-------------------------======================----------------
