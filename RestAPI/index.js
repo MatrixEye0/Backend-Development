@@ -21,9 +21,17 @@ app.get('/user/:id',(req,res)=>{
     return res.json(founduser)
 });
 
-// Middleware
+// Middleware and more about you learn in express website -> execute code, make change in req and res, end req-res cycle, call next middleware function in stack
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// middleware one example
+app.use((req,res,next)=>{
+    fs.appendFile('./log.txt',`\n${req.method} ${req.path} ${new Date().toISOString()}` ,
+    (err,data)=>{
+        next();
+    })
+})
 
 // POST request
 app.post('/userpost', (req, res) => {
@@ -34,7 +42,7 @@ app.post('/userpost', (req, res) => {
 
     fs.writeFileSync( './MOCK_DATA.json', JSON.stringify(user, null, 2) );
 
-    return res.json({ status: "success",   user: newUser });
+    return res.status(201).json({ status: "success",   user: newUser });
 });
 
 //patch request
