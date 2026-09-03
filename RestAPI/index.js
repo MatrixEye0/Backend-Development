@@ -37,11 +37,8 @@ app.use((req,res,next)=>{
 app.post('/userpost', (req, res) => {
        // console.log(req.body); 
     const newUser = req.body;
-    
     user.push({ ...newUser,  id: user.length + 1  });
-
     fs.writeFileSync( './MOCK_DATA.json', JSON.stringify(user, null, 2) );
-
     return res.status(201).json({ status: "success",   user: newUser });
 });
 
