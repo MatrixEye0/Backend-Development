@@ -45,6 +45,7 @@ app.post('/userpost', (req, res) => {
 //patch request
 app.patch('/user/:id',(req,res)=>{
     const id = Number(req.params.id);
+    console.log(id);
 });
 
 // delete request
