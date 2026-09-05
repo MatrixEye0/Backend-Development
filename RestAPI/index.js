@@ -2,6 +2,7 @@ const express = require ('express')
 const fs = require('fs')
 const user= require('./MOCK_DATA.json')// import user 
 
+
 const app = express();
 const port = 3000;
 
