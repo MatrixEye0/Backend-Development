@@ -12,7 +12,7 @@ mongo.connect('mongodb://127.0.0.1:27017/nameOfDb')
 .then(()=>console.log('MongoDb Connected'))
 .catch((err)=>console.log(err))
 
-//mongo schema
+//mongo schema 
 const userSchema = new mongo.Schema({
     first_name:{
         type:String,
@@ -92,7 +92,7 @@ app.route('/users/:id')
     const user = await User.findById(req.params.id)
 })
 .patch(async(req,res)=>{
-     await User.findByIdAndUpdate(req.params.id,{job_Title: "Emperor"});
+     await User.findByIdAndUpdate(req.params.id,{gender: "Girl"});
      return res.json({message:`User with id ${req.params.id} updated`})
 })
 .delete(async(req,res)=>{
