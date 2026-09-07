@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+/* Main container */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+/* Heading */
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 42px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* Card */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+/* Form */
+
+.form-group {
+    display: flex;
+    gap: 12px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-group button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Generated URL */
+
+.generated {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 15px 18px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.generated p {
+    color: #1e40af;
+    font-size: 15px;
+}
+
+.generated a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.generated a:hover {
+    text-decoration: underline;
+}
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #111827;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+.short-id {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.redirect-url {
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Section heading */
+
+.table-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+

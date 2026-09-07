@@ -1,1 +1,1 @@
-{"name":"url_shortner","version":"1.0.0","main":"index.js","author":"","license":"ISC","description":"","scripts":{"dev":"nodemon index.js"},"dependencies":{"express":"^5.2.1","mongoose":"^9.9.5","nanoid":"^6.0.1","nodemon":"^3.1.14"}}
+{"name":"url_shortner","version":"1.0.0","main":"index.js","author":"","license":"ISC","description":"","scripts":{"dev":"nodemon index.js"},"dependencies":{"ejs":"^6.0.1","express":"^5.2.1","mongoose":"^9.9.5","nanoid":"^6.0.1","nodemon":"^3.1.14"}}
