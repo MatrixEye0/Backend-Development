@@ -16,8 +16,16 @@ app.use(express.static('public'))
 
 // routes
 app.get('/', async(req,res)=>{
-    const contacts = await contact.find()
-    res.render('home',{contacts})
+    // const contacts = await contact.find() now use paginate which show limited row which i want to show
+
+    const { page=1,limit=2} = req.query // http://localhost:1000/?page=3  you find page like this
+    const  options ={
+        page:parseInt(page),
+        limit: parseInt(limit) // this mean how many row show in one time
+    }
+    const contacts = await contact.paginate({}, options)
+    // res.send(result)
+   res.render('home',{contacts})
 })
 
 app.get('/show-contact/:id',async(req,res)=>{
