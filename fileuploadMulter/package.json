@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.5",
+    "multer": "^2.3.0",
+    "nodemon": "^3.1.14"
+  },
+  "name": "fileuploadmulter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
