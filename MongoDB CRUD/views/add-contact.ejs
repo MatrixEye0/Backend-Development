@@ -11,6 +11,9 @@
               </div> 
               <form action="/add-contact" method="POST">         
               <div class="card-body">
+
+                <% if (typeof errors !== 'undefined' && errors.length > 0) { %> <div class="alert alert-danger"> <% errors.forEach(error => { %> <div><%= error.msg %></div> <% }) %> </div> <% } %>
+
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group row">
