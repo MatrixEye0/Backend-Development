@@ -1,0 +1,26 @@
+Nodemailer Node.js ka package hai jo tumhare backend se emails send karne deta hai. otp ke time etc
+
+const nodemailer = require("nodemailer");
+const transporter = nodemailer.createTransport({
+    service: "gmail", // which mail provider
+    auth: {
+        user: process.env.EMAIL_USER,// sender
+        pass: process.env.EMAIL_PASS //authentication credential hai.
+    }
+});
+
+async function sendEmail() {
+
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: "customer@gmail.com",
+        subject: "Service Request Created",
+        text: "Your AC repair request has been created successfully."
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+
+    console.log("Email sent:", info.messageId);
+}
+
+sendEmail();
