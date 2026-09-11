@@ -1,0 +1,53 @@
+Tabulator.js, it is a JavaScript library used to create 
+interactive, dynamic tables—sorting, filtering, pagination, editing, row selection, etc.
+
+1. npm install tabulator-tables
+2. in html <link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet">
+
+<script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
+
+3. const table = new Tabulator("#service-table", {
+    height: "400px",
+
+    data: [
+        {
+            id: 1,
+            customer: "Rahul",
+            service: "AC Repair",
+            status: "Pending",
+            amount: 500
+        },
+        {
+            id: 2,
+            customer: "Aman",
+            service: "RO Repair",
+            status: "Completed",
+            amount: 800
+        }
+    ],
+
+    columns: [
+        {
+            title: "ID",
+            field: "id"
+        },
+        {
+            title: "Customer",
+            field: "customer"
+        },
+        {
+            title: "Service",
+            field: "service"
+        },
+        {
+            title: "Status",
+            field: "status"
+        },
+        {
+            title: "Amount",
+            field: "amount"
+        }
+    ]
+});
+
+for more feature explore tabulator website 
