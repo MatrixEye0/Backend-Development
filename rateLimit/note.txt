@@ -1,0 +1,44 @@
+Rate limiting = ek user/IP kitni requests ek fixed time mein bhej sakta hai, uski limit lagana. save website from brute force attack
+
+1. npm install express-rate-limit
+
+2.const rateLimit = require("express-rate-limit");
+   const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, => time
+    max: 100, => how many limit in given time
+    message: "Too many requests, try again later."
+   });
+  app.use(limiter); =>use as middleware 
+
+=================================================HELMET===============================================================================
+
+Helmet = Express application ke HTTP response headers ko security ke liye configure karne wala middleware.
+Helmet browser ko kuch security-related instructions dene ke liye HTTP headers set karta hai.
+
+helmet by default inhe aur extra securty on kar deta hai Content-Security-Policy
+
+Content-Security-Policy (CSP)
+Cross-Origin-Opener-Policy (COOP)
+Origin-Agent-Cluster
+Referrer-Policy
+Strict-Transport-Security (HSTS)
+X-Content-Type-Options
+X-DNS-Prefetch-Control
+X-Download-Options
+X-Frame-Options
+X-Permitted-Cross-Domain-Policies
+X-XSS-Protection
+Cross-Origin-Resource-Policy (CORP)
+Cross-Origin-Embedder-Policy (COEP)
+
+agar inme se koi nhi chaiye to use false kardo
+
+ise ese use karo 
+1. npm i helmet
+2. import helmet
+3. app.use(helmet());
+
+if want disable some security do this 
+app.use(helmet({
+    securetyname: false,
+}))
