@@ -1,0 +1,24 @@
+Twilio ek communication platform/API hai.
+
+Isse tum applications se:
+
+SMS
+WhatsApp messages
+Voice calls
+OTP
+notifications
+
+etc. send kar sakte ho.
+
+
+1. instal Twilio 
+2. import
+3. login in twillio you get accountSid and auth token
+4.now pass both in twilio(inside here )
+4. send  => client.message.crete({
+    body: sms message,
+    from: mere phone no,
+    to: jisko bhejna,
+})
+
+for more info go to twillio website
