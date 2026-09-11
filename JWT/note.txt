@@ -1,0 +1,20 @@
+JWT ek digital token hota hai jo server user ko login successful hone ke baad deta hai.
+ Phir user jab protected API ko access karta hai, to woh token server ko bhejta hai. agar token match so access mil jayega
+
+
+Header → token ke algorithm/type ki information
+Payload → user ki claims, jaise userId, role = unsecure nver store password in this 
+Signature → verify karta hai ki token tamper nahi hua = ye secret key hoti hai most secure aur checking ke time jwt ka signature hi match hota hai
+
+jwt.sign(payload, secretKey, options) => .sign crete jwt payload is user info secretkey is screte key in env, option you tell duration of token
+
+
+| JWT                                                   | Session                                       |
+| ----------------------------------------------------- | --------------------------------------------- |
+| Token-based authentication                            | Session-based authentication                  |
+| Server token ki information/validity verify karta hai | Server session ko store karta hai             |
+| Usually stateless                                     | Stateful                                      |
+| JWT client ke paas hota hai                           | Session data server ke paas hota hai          |
+| Scaling relatively easy                               | Session store ko scale/manage karna padta hai |
+| Logout/revocation more complicated                    | Logout easy                                   |
+| Microservices/API ke liye popular                     | Traditional web apps ke liye very common      |
