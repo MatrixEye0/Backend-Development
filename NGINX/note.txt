@@ -1,0 +1,14 @@
+Nginx (pronounced "Engine-X") ek high-performance web server, reverse proxy, load balancer aur HTTP server hai.
+
+Nginx client aur humare backend server ke beech ek middle layer ki tarah kaam kar sakta ha
+
+Nginx ek traffic manager/gateway jo Internet se aane wali requests ko sahi backend/frontend service tak efficiently pahunchata hai.
+
+do => reverse proxy => Client aur backend server ke beech ek middle server jo client ki request ko backend tak forward karta hai aur backend ka response client ko wapas deta hai. par ye server ki side se karta hai isliye reverse proxy
+   => load balancing => basicaly nginx  tell who use which server  for maintain large traffic
+   => HTTP cache =>Stores copies of frequently requested content to speed up response times.
+   => act as api Gateway
+   => handel SSL certificate 
+
+now code after learn Docker , AWS .
+
