@@ -1,0 +1,35 @@
+CRON
+Cron ek time-based task scheduler hai jo automatically kisi 
+command, script, ya function ko specific time ya fixed interval par run karta hai.
+
+Cron = "Kaam ko schedule karke automatically chalana."
+
+Real-life example
+
+assume website par har day raat 12 baje:
+
+Old logs delete karne hain
+Database backup lena hai
+Expired sessions remove karne hain
+Daily report generate karni hai
+Users ko reminder email bhejni hai
+
+ham nahi karege. Cron automatically ye kaam karega.
+
+steps
+1. npm install node-cron
+
+2. const cron = require("node-cron");
+
+   cron.schedule("* * * * *", () => {
+    console.log("Task running...");
+   });
+
+ * * * * * *
+ | │ │ │ │ │
+ │ │ │ │ └── Day of Week
+s  │ │ │ └──── Month
+   │ │ └────── Day of Month
+   │ └──────── Hour
+   └────────── Minute
+s = second   
