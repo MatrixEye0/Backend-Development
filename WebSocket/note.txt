@@ -1,5 +1,7 @@
-Normal HTTP mein client request karta hai → server response deta hai.
-WebSocket mein connection continuously open rehta hai, aur Client ya Server dono kisi bhi time message bhej sakte hain.
+A. Normal HTTP mein client request karta hai → server response deta hai.
+B. WebSocket mein connection continuously open rehta hai, aur Client ya Server dono kisi bhi time message bhej sakte hain.
+C. connection full duplex hota hai agar ye one way hua to SSE(server sent event) hoga 
+   jese download kara now conitue show 20% download 30% and so on
 
 1. npm install socket.io
 2. const { Server } = require("socket.io");

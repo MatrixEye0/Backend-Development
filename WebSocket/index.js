@@ -14,14 +14,14 @@ app.get('/',(req,res)=>{
 
 
 // emit() = Event bhejna
-// on = message sunnna 
+// on = message sunna 
 
 io.on('connection',(socket)=>{
     console.log('User Connected'  + socket.id)
 
     socket.on('message',(msg)=>{
-      console.log(msg) // server recieve message 
-      io.emit('message',msg) // server send mssage to al client
+      console.log(msg) // server receive message 
+      io.emit('message',msg) // server send message to all client
     })  
 })
 
