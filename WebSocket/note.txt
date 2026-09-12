@@ -1,0 +1,20 @@
+Normal HTTP mein client request karta hai → server response deta hai.
+WebSocket mein connection continuously open rehta hai, aur Client ya Server dono kisi bhi time message bhej sakte hain.
+
+1. npm install socket.io
+2. const { Server } = require("socket.io");
+
+const io = new Server(3000);
+
+io.on("connection", (socket) => {
+    console.log("User connected");
+
+    socket.on("message", (msg) => {
+        console.log(msg);
+
+        io.emit("message", msg);
+    });
+});
+
+WebSocket is a protocol that provides a persistent, full-duplex communication channel between client and server, 
+allowing both sides to send data in real time without repeatedly creating new HTTP requests.

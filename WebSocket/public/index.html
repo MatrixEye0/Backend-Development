@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chat karo </h1>
+    <ul id="message"></ul>
+
+    <form id="myform" action="">
+        <label for="">Message</label>
+        <input type="text" id="input" autocomplete="off">
+        <button id="sendBtn">Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io()
+        const input = document.querySelector('#input')
+         const btn = document.querySelector('#sendBtn')
+
+         btn.onclick = (e) =>{
+           e.preventDefault()
+           socket.emit('message', input.value.trim())
+           input.value='';
+         }
+         socket.on('message',(msg)=>{
+            const li = document.createElement('li')
+            li.innerText=msg;
+            document.querySelector('#message').appendChild(li)
+         })
+    </script>
+</body>
+</html>
